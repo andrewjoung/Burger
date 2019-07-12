@@ -1,19 +1,21 @@
 <h1>Burger Time</h1>
 
-<div id="uneaten">
-    {{#each burgers}}
-        {{#unless devoured}}
-             <p>{{this.id}}. {{this.burger_name}} <button data-id="{{this.id}}" class="devour"> Devour! </button></p>
-        {{/unless}}
-    {{/each}}
-</div>
+<div class="row">
+    <div id="uneaten" class="col-md-6">
+        {{#each burgers}}
+            {{#unless devoured}}
+                <p>{{this.id}}. {{this.burger_name}} <button data-id="{{this.id}}" class="devour btn-xs btn-primary"> Devour! </button></p>
+            {{/unless}}
+        {{/each}}
+    </div>
 
-<div id="eaten">
-    {{#each burgers}}
-        {{#if devoured}}
-            <p>{{this.id}}. {{this.burger_name}} </p>
-        {{/if}}
-    {{/each}}
+    <div id="eaten" class="col-md-6">
+        {{#each burgers}}
+            {{#if devoured}}
+                <p>{{this.id}}. {{this.burger_name}} </p>
+            {{/if}}
+        {{/each}}
+    </div>
 </div>
 
 <div id="burgerInput">
@@ -21,7 +23,7 @@
         <div class="form-group">
             <textarea id="burgerText" name="burger" rows="8" cols="40"></textarea>
         </div>
-        <button type="submit">Submit Burger</button>
+        <button type="submit" class="btn btn-success">Submit Burger</button>
         <p>Enter the type of burger you want to eat and click submit!</p>
     </form>
 </div>
