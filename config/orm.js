@@ -9,7 +9,7 @@ var orm = {
         });
     },
     insertOne: function(table, column, values, cb) {
-        var queryString = "INSERT INTO " + table + "(" + column[0] +", " + column[1] + ") " + "VALUES (?, ? ,?)";
+        var queryString = "INSERT INTO " + table + "(" + column[0] + ") " + "VALUES (?)";
         console.log(queryString);
 
         connection.query(queryString, values, function(error, result) {
@@ -18,7 +18,7 @@ var orm = {
         });
     },
     updateOne: function(table, condition, cb) {
-        var queryString = "UPDATE " + table + "SET devoured = true WHERE " + condition;
+        var queryString = "UPDATE " + table + " SET devoured = true WHERE " + condition;
         connection.query(queryString, function(error, result){
             if(error) throw error;
             cb(result);
