@@ -1,0 +1,56 @@
+body {
+    background-color: #FCE205;
+}
+
+img {
+    width:100px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;
+}
+
+.number {
+    color: #e43737;
+    font-weight: bold;
+
+}
+
+.header {
+    font-size: 25px;
+    font-family: 'Pacifico', cursive;
+    color:#e43737;
+}
+
+hr {
+    border-top: 1px solid #bdbdbd;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+#uneaten, #eaten {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.row {
+    background-color: #ffffffa8;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 5px 5px 10px #00000047;
+}
+#uneaten {
+    padding: 15px;
+    
+}
+
+#eaten {
+    padding: 15px;
+    color: #3333338a;
+}
+

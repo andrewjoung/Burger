@@ -1,15 +1,19 @@
 <h1>Burger Time</h1>
-
+<img src="/assets/images/burger.png" alt="burger">
 <div class="row">
     <div id="uneaten" class="col-md-6">
+        <h2 class="header">Enjoy a Burger</h2>
+        <hr>
         {{#each burgers}}
             {{#unless devoured}}
-                <p>{{this.id}}. {{this.burger_name}} <button data-id="{{this.id}}" class="devour btn-xs btn-primary"> Devour! </button></p>
+               <p><span class="number">{{this.id}}. </span>{{this.burger_name}} <button data-id="{{this.id}}" class="devour btn-xs btn-primary"> Devour! </button></p>
             {{/unless}}
         {{/each}}
     </div>
 
     <div id="eaten" class="col-md-6">
+        <h2 class="header">Sorry these are all gone</h2>
+        <hr>
         {{#each burgers}}
             {{#if devoured}}
                 <p>{{this.id}}. {{this.burger_name}} </p>
